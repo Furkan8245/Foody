@@ -1,6 +1,5 @@
 ﻿using Foody.BusinessLayer.Abstract;
 using Foody.DataAccessLayer.Abstract;
-using Foody.DataAccessLayer.EntityFramework;
 using Foody.EntitiyLayer.Concrete;
 using System;
 using System.Collections.Generic;
