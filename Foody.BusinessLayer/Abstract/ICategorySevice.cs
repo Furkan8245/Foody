@@ -9,5 +9,8 @@ namespace Foody.BusinessLayer.Abstract
 {
     public interface ICategorySevice:IGenericService<Category>
     {
+    
+
+
     }
 }
