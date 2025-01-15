@@ -7,10 +7,8 @@ using System.Threading.Tasks;
 
 namespace Foody.BusinessLayer.Abstract
 {
-    public interface ICategorySevice:IGenericService<Category>
+    public interface ICategorySevice : IGenericService<Category>
     {
-    
-
-
+        
     }
 }
