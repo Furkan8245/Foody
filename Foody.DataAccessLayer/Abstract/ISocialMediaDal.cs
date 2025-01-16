@@ -9,5 +9,8 @@ namespace Foody.DataAccessLayer.Abstract
 {
     public interface ISocialMediaDal:IGenericDal<SocialMedia>
     {
+
+        void Delete(SocialMedia entity);
+
     }
 }

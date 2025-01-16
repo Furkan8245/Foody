@@ -10,7 +10,7 @@ namespace Foody.DataAccessLayer.Context
             optionsBuilder.UseSqlServer("Server=DESKTOP-2O56BVB;Initial Catalog=FoodyFb;Integrated Security=True");
         }
 
-        // Burada birincil anahtarı açıkça tanımlıyoruz
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Address>()
