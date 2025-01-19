@@ -17,9 +17,9 @@ namespace Foody.BusinessLayer.Concrete
             _productDal = ProductDal;
         }
 
-        public void TDelete(Product entity)
+        public void TDelete(int id)
         {
-            _productDal.Delete(entity);
+            _productDal.Delete(id);
         }
 
         public List<Product> TGetAll()

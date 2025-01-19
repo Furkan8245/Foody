@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Foody.BusinessLayer.Concrete
 {
-    public class CategoryManager : ICategorySevice
+    public class CategoryManager:ICategorySevice
     {
         private readonly ICategoryDal _categoryDal;
         public CategoryManager(ICategoryDal CategoryDal)
@@ -17,9 +17,9 @@ namespace Foody.BusinessLayer.Concrete
             _categoryDal = CategoryDal;
         }
 
-        public void TDelete(Category entity)
+        public void TDelete(int id)
         {
-            _categoryDal.Delete(entity);
+            _categoryDal.Delete(id);
         }
 
         public List<Category> TGetAll()

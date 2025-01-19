@@ -17,9 +17,9 @@ namespace Foody.BusinessLayer.Concrete
             _featureDal = FeatureDal;
         }
 
-        public void TDelete(Feature entity)
+        public void TDelete(int id)
         {
-            _featureDal.Delete(entity);
+            _featureDal.Delete(id);
         }
 
         public List<Feature> TGetAll()

@@ -19,9 +19,9 @@ namespace Foody.BusinessLayer.Concrete
             _addressDal = addressDal;
         }
 
-        public void TDelete(Address entity)
+        public void TDelete(int id)
         {
-            _addressDal.Delete(entity);  
+            _addressDal.Delete(id);  
         }
 
         public List<Address> TGetAll()

@@ -17,9 +17,9 @@ namespace Foody.BusinessLayer.Concrete
             _socialMediaDal = SocialMediaDal;
         }
 
-        public void TDelete(SocialMedia entity)
+        public void TDelete(int id)
         {
-            _socialMediaDal.Delete(entity);
+            _socialMediaDal.Delete(id);
         }
 
         public List<SocialMedia> TGetAll()

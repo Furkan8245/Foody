@@ -17,9 +17,9 @@ namespace Foody.DataAccessLayer.Repositories
             _context = context;
         }
 
-        public void Delete(T entity)
+        public void Delete(int id)
         {
-            var value = _context.Set<T>().Find(entity);
+           var value=_context.Set<T>().Find(id);
             _context.Set<T>().Remove(value);
             _context.SaveChanges();
         }
