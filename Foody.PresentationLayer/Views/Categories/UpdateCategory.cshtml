@@ -1,11 +1,8 @@
-﻿@model Category 
-
+﻿@model Category
 @{
-    ViewData["Title"] = "CreateCategory";
+    ViewData["Title"] = "UpdateCategory";
     Layout = "~/Views/AdminLayout/Index.cshtml";
-} 
-
-
+}
 
 <div class="container">
     <div class="page-inner">
@@ -21,13 +18,13 @@
                     <i class="icon-arrow-right"></i>
                 </li>
                 <li class="nav-item">
-                    <a href="#">Add Category</a>
+                    <a href="#">Update Category</a>
                 </li>
                 <li class="separator">
                     <i class="icon-arrow-right"></i>
                 </li>
                 <li class="nav-item">
-                    <a href="#">New Create Category</a>
+                    <a href="#">Update Category Operation</a>
                 </li>
             </ul>
         </div>
@@ -36,14 +33,17 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <div class="card-title">Add Category Panel</div>
+                        <div class="card-title">Update Category Panel</div>
                     </div>
                     <div class="card-body">
                         <form method="post">
-                            <label>Category Name</label>
-                            <input type="text" asp-for="CategoryName" class="form-control"/>
+                           
+                            <input type="hidden" asp-for="CategoryId" class="form-control" />
                             <br />
-                            <button class="btn btn-primary">Create Category</button>
+                            <label>Category Name</label>
+                            <input type="text" asp-for="CategoryName" class="form-control" />
+                            <br />
+                            <button class="btn btn-success">Update Category</button>
                         </form>
                     </div>
                 </div>
@@ -53,5 +53,4 @@
         </div>
     </div>
 </div>
-
 

@@ -34,5 +34,18 @@ namespace Foody.PresentationLayer.Controllers
 			_categorySevice.TDelete(id);
 			return RedirectToAction("CategoryList");
 		}
+		[HttpGet]
+		public IActionResult UpdateCategory(int id)
+		{
+			var value = _categorySevice.TGetById(id);
+			return View(value);
+		}
+		[HttpPost]
+		public IActionResult UpdateCategory(Category category) 
+		{ 
+		 _categorySevice.TUpdate(category);
+			return RedirectToAction("CategoryList");
+		
+		}
 	}
 }
