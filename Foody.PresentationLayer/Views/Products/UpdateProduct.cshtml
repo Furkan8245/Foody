@@ -1,0 +1,71 @@
+﻿@model Product
+@{
+    ViewData["Title"] = "UpdateProduct";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="container">
+    <div class="page-inner">
+        <div class="page-header">
+            <h3 class="fw-bold mb-3">Products</h3>
+            <ul class="breadcrumbs mb-3">
+                <li class="nav-home">
+                    <a href="#">
+                        <i class="icon-home"></i>
+                    </a>
+                </li>
+                <li class="separator">
+                    <i class="icon-arrow-right"></i>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Update Product</a>
+                </li>
+                <li class="separator">
+                    <i class="icon-arrow-right"></i>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Update Product Page</a>
+                </li>
+            </ul>
+        </div>
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Update Product Panel</div>
+                    </div>
+                    <div class="card-body">
+                        <form method="post">
+                            <input type="hidden" asp-for="ProductId" />
+                            <label>Product Name</label>
+                            <input type="text" asp-for="ProductName" class="form-control" />
+                            <br />
+                            <label>Product Stock</label>
+                            <input type="number" asp-for="Stock" class="form-control" />
+                            <br />
+                            <label>Product Price</label>
+                            <input type="text" asp-for="Price" class="form-control" />
+                            <br />
+                            <label>Product Image Url</label>
+                            <input type="text" asp-for="ImageUrl" class="form-control" />
+                            <br />
+                            <label>Product Description</label>
+                            <input type="text" asp-for="Description" class="form-control" />
+                            <br />
+                            <label>Product Category</label>
+                            <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.categories"></select>
+                            <br />
+                            <button class="btn btn-success">Update Product</button>
+                        </form>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
