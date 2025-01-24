@@ -1,0 +1,57 @@
+﻿@model CreateSliderDto
+@{
+    ViewData["Title"] = "CreateSlider";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="container">
+    <div class="page-inner">
+        <div class="page-header">
+            <h3 class="fw-bold mb-3">Sliders</h3>
+            <ul class="breadcrumbs mb-3">
+                <li class="nav-home">
+                    <a href="#">
+                        <i class="icon-home"></i>
+                    </a>
+                </li>
+                <li class="separator">
+                    <i class="icon-arrow-right"></i>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Add Slider</a>
+                </li>
+                <li class="separator">
+                    <i class="icon-arrow-right"></i>
+                </li>
+                <li class="nav-item">
+                    <a href="#">New Create Slider</a>
+                </li>
+            </ul>
+        </div>
+        <div class="row">
+
+            <div class="col-md-12">
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Add Slider Panel</div>
+                    </div>
+                    <div class="card-body">
+
+                        <form method="post">
+                            <label>Slider Title Text</label>
+                            <input type="text" asp-for="Title" class="form-control" />
+                            <br />
+                            <label>Slider Image Url</label>
+                            <input type="text" asp-for="ImageUrl" class="form-control" />
+                            <br />
+                            <button class="btn btn-primary">Create Slider</button>
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

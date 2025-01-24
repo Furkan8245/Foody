@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Foody.BusinessLayer.Abstract
 {
-    internal interface IAboutService:IGenericService<About>
+    public interface IAboutService:IGenericService<About>
     {
     }
 }

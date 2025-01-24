@@ -40,6 +40,7 @@ namespace Foody.PresentationLayer.Controllers
 			_sliderService.TDelete(id);
 			return RedirectToAction("SliderList");
 		}
+		[HttpGet]
 		public IActionResult UpdateSlider(int id) 
 		{
 			var value = _sliderService.TGetById(id);
