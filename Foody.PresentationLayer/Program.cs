@@ -16,14 +16,30 @@ builder.Services.AddScoped<ICategorySevice, CategoryManager>();
 builder.Services.AddScoped<IProductDal, EfProductDal>();
 builder.Services.AddScoped<IProductService, ProductManager>();
 
+builder.Services.AddScoped<ISliderDal, EfSliderDal>();
+builder.Services.AddScoped<ISliderService, SliderManager>();
+
+
 builder.Services.AddScoped<IAboutDal, EfAboutDal>();
 builder.Services.AddScoped<IAboutService, AboutManager>();
+
+builder.Services.AddScoped<IAboutItemDal, EfAboutItemDal>();
+builder.Services.AddScoped<IAboutItemService, AboutItemManager>();
+
+
 
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 builder.Services.AddControllersWithViews();
 
 
 var app = builder.Build();
+app.UseStatusCodePages(async x =>
+{
+    if (x.HttpContext.Response.StatusCode == 404)
+    {
+        x.HttpContext.Response.Redirect("/ErrorPages/ErrorPage404/"); 
+    };
+});
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
