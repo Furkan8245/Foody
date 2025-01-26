@@ -9,6 +9,6 @@ namespace Foody.DataAccessLayer.Abstract
 {
     public interface IFeatureDal:IGenericDal<Feature>
     {
-
+        List<Feature> FeatureListByStatusTrue();
     }
 }

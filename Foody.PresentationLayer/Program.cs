@@ -26,6 +26,8 @@ builder.Services.AddScoped<IAboutService, AboutManager>();
 builder.Services.AddScoped<IAboutItemDal, EfAboutItemDal>();
 builder.Services.AddScoped<IAboutItemService, AboutItemManager>();
 
+builder.Services.AddScoped<IFeatureDal, EfFeatureDal>();
+builder.Services.AddScoped<IFeatureService, FeatureManager>();
 
 
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
