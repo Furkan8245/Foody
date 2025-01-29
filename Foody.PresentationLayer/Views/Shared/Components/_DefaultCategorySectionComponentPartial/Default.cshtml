@@ -1,4 +1,16 @@
-﻿
-@*
-    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model List<Category>
+
+
+
+<div class="col-lg-6 text-start text-lg-end wow slideInRight" data-wow-delay="0.1s">
+    <ul class="nav nav-pills d-inline-flex justify-content-end mb-5">
+        @foreach(var item in Model)
+        {
+            <li class="nav-item me-2">
+                <a class="btn btn-outline-primary border-2 active" data-bs-toggle="pill" href="#tab-1">@item.CategoryName</a>
+            </li>
+        }
+        
+        
+    </ul>
+</div>
