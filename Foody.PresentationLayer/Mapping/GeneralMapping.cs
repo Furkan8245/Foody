@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Foody.DtoLayer.Dtos.AboutDtos;
+using Foody.DtoLayer.Dtos.ReviewDtos;
 using Foody.DtoLayer.Dtos.SliderDtos;
 using Foody.EntitiyLayer.Concrete;
 
@@ -18,6 +19,9 @@ namespace Foody.PresentationLayer.Mapping
             CreateMap<CreateSliderDto, Slider>().ReverseMap();
             CreateMap<GetByIdSliderDto, Slider>().ReverseMap();
             CreateMap<UpdateSliderDto, Slider>().ReverseMap();
+
+            CreateMap<ResultReviewDto,Review>().ReverseMap();
+
         }
     }
 }
